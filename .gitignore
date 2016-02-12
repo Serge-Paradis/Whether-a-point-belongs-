@@ -1,0 +1,52 @@
+//
+//  main.cpp
+//  Lab 3
+//
+//  Created by Serge Zakharov on 12/10/15.
+//  Copyright © 2015 Serge Zakharov. All rights reserved.
+//
+
+#include <iostream>
+using namespace std;  // include std
+int main(int argc, const char * argv[]) {
+    std::cout << "Whether a point belongs????"<<"\n"
+    "\n Autor: Zakharov Sergey \n Lab: 3 \n version: 0.0.1 \n Group: 5302"<< std::endl;
+    
+    std::cout <<"\n";
+    float x, y, a,b,R;
+    cout<<"  Enter x: ";
+        cin>>x;
+    cout<<"  Enter y: ";
+        cin>>y;
+    cout<<"  Enter a: ";
+        cin>>a;
+    cout<<"  Enter b: ";
+        cin>>b;
+    cout<<"  Enter R: ";
+        cin>>R;
+    if ((x<a) && (y<b)) // circle or triangle
+        {
+            if((a-x)+(b-y)<=R) // It belongs to the triangle
+            {
+                cout<<"belongs"<<"\n";
+                
+            }
+            else
+            { // не принадлежит
+               cout<<"do not belong"<<"\n";
+            }
+        }
+        else // круг
+        {
+            if (((x-a)*(x-a)+(y-b)*(y-b))<=R * R)
+            {
+                cout<<"belongs"<<"\n";
+                
+            } else {
+                cout<<"do not belong"<<"\n";
+            }
+            
+        }
+    
+    return 0;
+}
